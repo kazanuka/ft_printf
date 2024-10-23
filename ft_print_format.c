@@ -23,10 +23,6 @@ int ft_print_format(char c,va_list ap)
 	if(c == 'X')
 		n += printnum(va_arg(ap,int),16);
     if(c == '%')
-    {
-        char a = '%';
-        write(1,&a,1);
-        n++;
-    }
+        n += printc('%');
 	return (n);
 }
