@@ -22,18 +22,29 @@ int prints(char *s)
 	return (n);
 }
 
-int printp(int d)
+int printnum(int num, int base)
 {
+	char *set = "0123456789ABCDEF";
+	int n;
 
-}
-
-int printd(int d)
-{
+	if(num < 0)
+	{
+		printc('-');
+		return (printnum(-num,base));
+	}
 	
-}
+	else if(num < base)
+	{
+		return (printc(set[num]));
+	}
 
-int printi(int d)
-{
+	else
+	{
+		n += printnum(num / base,base);
+		return (n + printnum(num,base));
+	}
+
+
 
 }
 
@@ -42,12 +53,7 @@ int printu(unsigned int d)
 
 }
 
-int printx(int x)
-{
-
-}
-
-int printx_(int x)
+int printx_(int x, int base)
 {
 
 }
@@ -57,10 +63,6 @@ int printper(char c)
 
 }
 
-int printu(int p)
-{
-
-}
 
 int ft_print_format(char c,va_list ap)
 {
@@ -69,20 +71,28 @@ int ft_print_format(char c,va_list ap)
 	n = 0;
 	if (c == 'c')
 		n += printc(va_arg(ap,char));
+	
 	else if (c == 's')
 		n += prints(va_arg(ap,char *));
+	
 	else if (c == 'p')
-		n += printp(va_arg(ap,void*));
+		n += printnum(va_arg(ap,void*),16);
+	
 	else if (c == 'd')
-		n += printd(va_arg(ap,void*));
+		n += printnum(va_arg(ap,void*),10);
+	
 	else if( c == 'i')
-		n += printi(va_arg(ap,void*));
+		n += printnum(va_arg(ap,void*),10);
+	
 	else if (c == 'u')
 		n += printu(va_arg(ap,void*));
+	
 	else if (c == 'x')
-		n += printx(va_arg(ap,void*));
+		n += printnum(va_arg(ap,void*),16);
+	
 	else if(c == 'X')
 		n += printx_(va_arg(ap,void*));
+	
 	else if(c == '%')
 		n += printper(va_arg(ap,void*));
 
@@ -91,21 +101,22 @@ int ft_print_format(char c,va_list ap)
 
 int ft_printf(const char *s, ...)
 {
+	int		n;
 	va_list ap;
 	va_start(ap,s);
-	int n;
-
+	
 	n = 0;
 	
 	while(*s)
 	{
 		if(*s == '%')
-			n += ft_print_format(*(s++),ap);
+			n += ft_print_format(*(++s),ap);
 		else
 		{
 			write(1,s,1);
 			*s++;
 		}	
 	}
+	va_end(ap);
 	return (n);
 }
