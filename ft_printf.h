@@ -12,6 +12,7 @@ int printnum(long num, int base);
 int prints(char *s);
 int printc(char c);
 int ft_print_format(char c,va_list ap);
+int ft_printp(long num, int base);
 
 
 #endif
