@@ -1,3 +1,4 @@
+
 #include "ft_printf.h"
 
 int	printnum(long num, int base)
@@ -5,7 +6,7 @@ int	printnum(long num, int base)
 	char	*set;
 	int		n;
 
-	*set = "0123456789ABCDEF";
+	set = ft_strdup("0123456789ABCDEF");
 	n = 0;
 	if (num < 0)
 	{

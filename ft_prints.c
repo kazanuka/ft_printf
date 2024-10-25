@@ -1,14 +1,14 @@
+
 #include "ft_printf.h"
 
-
-int prints(char *s)
+int	prints(char *s)
 {
-	int n;
+	int	n;
 
 	n = 0;
-	while(s)
+	while (*s)
 	{
-		write(1,s,1);
+		write(1, s, 1);
 		s++;
 		n++;
 	}

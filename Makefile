@@ -6,7 +6,12 @@ FILES	= 	ft_print_format.c \
 			ft_printnum.c \
 			ft_prints.c \
 			ft_printx.c \
-		  
+		  	ft_printp.c \
+			ft_memcpy.c \
+			ft_strdup.c \
+			ft_strlen.c \
+			
+			
 CC	= gcc
 
 CFLAGS	= -Wall -Werror -Wextra
