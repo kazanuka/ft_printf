@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/26 09:13:51 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/26 11:08:56 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 
@@ -5,7 +16,6 @@
 
 # include <stdlib.h>
 # include <stdarg.h>
-# include <unistd.h>
 
 int		ft_printf(const char *s, ...);
 int		printx(int x, int base);
@@ -18,8 +28,6 @@ int		ft_printp(long num, int base);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
-char	*ft_strdup(const char *s1);
-
 size_t	ft_strlen(const char *s);
-
+size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 #endif
