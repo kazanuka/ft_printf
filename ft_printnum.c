@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:44 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/26 12:12:44 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 10:38:04 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,13 @@ int	printnum(long num, int base)
 	if (num < 0)
 	{
 		printc ('-');
-		return (printnum(-num, base));
+		num = -num;
+		n++;
 	}
-	else if (num < base)
+	if (num < base)
 	{
 		printc (set[num]);
-		return (++n);
+		return (n + 1);
 	}
 	else
 	{
