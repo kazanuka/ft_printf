@@ -3,8 +3,10 @@
 int main(void)
 {
 
-	int a = ft_printf(" %d \n", -1);
-	int b = printf(" %d \n", -1);
+	int a = ft_printf(" %X \n", -56);
+	int b = printf(" %X \n", -56);
 	
-	printf("%d---------%d",a,b);
+	//printf("%d---------%d",a,b);
+
+
 }

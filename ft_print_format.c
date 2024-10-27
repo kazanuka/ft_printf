@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:14:15 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/27 10:41:17 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 12:52:03 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	ft_print_format(char c, va_list ap)
 	else if (c == 'u')
 		n += printnum(va_arg(ap, unsigned int), 10);
 	else if (c == 'x')
-		n += printx(va_arg(ap, long), 16);
+		n += printnum(va_arg(ap, unsigned int), 16);//
 	else if (c == 'X')
-		n += printnum(va_arg(ap, long), 16);
+		n += printx(va_arg(ap, unsigned int), 16);//caution
 	else if (c == '%')
 		n += printc('%');
 	return (n);

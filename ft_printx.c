@@ -6,28 +6,24 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:24 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/26 11:11:18 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 12:49:20 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	printx(int num, int base)
+int	printx(unsigned long num, int base)
 {
 	char	set[17];
 	int		n;
 
 	ft_strlcpy(set, "0123456789ABCDEF", 17);
 	n = 0;
-	if (num < 0)
-	{
-		printc('-');
-		return (printx(-num, base));
-	}
-	else if (num < base)
+
+	if (num < (unsigned long)base)
 	{
 		printc(set[num]);
-		return (n);
+		return (n + 1);
 	}
 	else
 	{

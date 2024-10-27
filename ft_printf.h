@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:51 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/27 10:38:31 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 12:48:45 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *s, ...);
-int		printx(int x, int base);
+int		printx(unsigned long x, int base);
 int		printu(unsigned int d);
 int		printnum(long num, int base);
 int		prints(char *s);
