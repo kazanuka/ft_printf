@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:51 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/27 12:48:45 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:42:55 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 int		ft_printf(const char *s, ...);
 int		printx(unsigned long x, int base);
 int		printu(unsigned int d);
-int		printnum(long num, int base);
+int		printnum(long num, int base, char *set);
 int		prints(char *s);
 int		printc(unsigned char c);
 int		ft_print_format(char c, va_list ap);
-int		ft_printp(unsigned long num, int base);
+int		ft_printp(unsigned long num, int base, char *set);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 

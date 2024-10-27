@@ -6,18 +6,16 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:34 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/27 13:29:59 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:42:07 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printp(unsigned long num, int base)
+int	ft_printp(unsigned long num, int base, char *set)
 {
-	char	set[17];
-	int		n;
+	int	n;
 
-	ft_strlcpy(set, "0123456789abcdef", 17);
 	n = 2;
 	printc('0');
 	printc('x');
@@ -28,8 +26,8 @@ int	ft_printp(unsigned long num, int base)
 	}
 	else
 	{
-		n += printnum(num / base, base);
-		n += printnum(num % base, base);
+		n += printnum(num / base, base, set);
+		n += printnum(num % base, base, set);
 		return (n);
 	}
 }

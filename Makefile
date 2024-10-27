@@ -6,7 +6,7 @@
 #    By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/26 09:13:56 by fkuyumcu          #+#    #+#              #
-#    Updated: 2024/10/26 11:05:33 by fkuyumcu         ###   ########.fr        #
+#    Updated: 2024/10/27 15:41:42 by fkuyumcu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ FILES	= 	ft_print_format.c \
 			ft_printf.c \
 			ft_printnum.c \
 			ft_prints.c \
-			ft_printx.c \
 		  	ft_printp.c \
 			ft_memcpy.c \
 			ft_strlen.c \
