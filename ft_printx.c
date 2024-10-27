@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:24 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/27 12:49:20 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:30:10 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	printx(unsigned long num, int base)
 
 	ft_strlcpy(set, "0123456789ABCDEF", 17);
 	n = 0;
-
 	if (num < (unsigned long)base)
 	{
 		printc(set[num]);

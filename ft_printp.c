@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:34 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/27 09:35:15 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:29:59 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_printp(unsigned long num, int base)
 	if (num < (unsigned long)base)
 	{
 		printc (set[num]);
-		return (n+1);
+		return (n + 1);
 	}
 	else
 	{
