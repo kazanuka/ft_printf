@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:13:34 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/26 12:31:31 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/27 09:35:15 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printp(long num, int base)
+int	ft_printp(unsigned long num, int base)
 {
 	char	set[17];
 	int		n;
@@ -21,11 +21,10 @@ int	ft_printp(long num, int base)
 	n = 2;
 	printc('0');
 	printc('x');
-	ft_printf("%d",n);
-	if (num < base)
+	if (num < (unsigned long)base)
 	{
 		printc (set[num]);
-		return (n);
+		return (n+1);
 	}
 	else
 	{
